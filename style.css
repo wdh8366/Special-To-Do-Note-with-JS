@@ -1,0 +1,177 @@
+/* 전체 배경 */
+body {
+    margin: 0;
+    background-image: url("images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* 메인 컨테이너 */
+  .container {
+    background-color: white;
+    width: 400px;
+    min-height: 80vh;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+  }
+  
+  /* 입력 영역 */
+  .input-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .task{
+    margin-top: 3px;
+  }
+  
+  /* 입력 필드 */
+  #task-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ff758c;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 117, 140, 0.2);
+  }
+  
+  #task-input::placeholder {
+    color: #ffb3c1;
+    font-style: italic;
+  }
+  
+  #task-input:focus {
+    border-color: #ff7eb3;
+    box-shadow: 0 6px 15px rgba(255, 117, 140, 0.4);
+    background: #fffafc;
+  }
+  
+  /* 추가 버튼 */
+  #add-button {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(255, 117, 140, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #add-button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 117, 140, 0.5);
+  }
+  
+  .task-area {
+    border: 1px solid lightgray;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fffafc;
+    height: 300px; /* 고정 높이 설정 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+  }
+  
+  /* 스크롤바 스타일 (크롬, 엣지, 사파리) */
+  .task-area::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .task-area::-webkit-scrollbar-thumb {
+    background-color: #ff758c;
+    border-radius: 4px;
+  }
+  
+  .task-area::-webkit-scrollbar-track {
+    background: #ffe0e6;
+  }
+  
+  /* 탭 네비게이션 */
+  .task-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .task-tabs a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .task-tabs a:hover {
+    color: #ff758c;
+  }
+  
+  /* 하이라이트 표시 */
+  #under-line {
+    height: 4px;
+    background-color: pink;
+    position: absolute;
+    width: 48px;
+    left: 30px;
+    top: 41px;
+    padding: 0px;
+    transition: 0.5s;
+    border-radius: 2px;
+  }
+  
+  /* 할 일 항목 */
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff0f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 117, 140, 0.2);
+    margin-bottom: 8px;
+  }
+  
+  .task-done {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .task button {
+    background: #ff758c;
+    border: none;
+    color: white;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .task button:hover {
+    background: #ff3b6b;
+  }
